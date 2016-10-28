@@ -1,0 +1,7 @@
+.page--full_bg__background {
+    background: url("images/MeihoUniversityBackground.jpg");
+}
+
+.page-full_bg > .navigation-bar {
+    background-color: transparent; 
+}

@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/background.css">
+    
+    <script>
+        ons.bootstrap()
+          .controller('AppController', function($scope) {
+            $scope.load = function(page) {
+              $scope.mySplitterContent.load(page)
+            }
+            $scope.open = function() {
+              $scope.mySplitterSide.open();
+            }
+          });
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
+    </script>
+</head>
+ 
+
+<body ng-controller="AppController as app" >
+  <ons-splitter>
+    <ons-splitter-side var="mySplitterSide" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item ng-click="load('home.html')" tappable>
+            主頁
+          </ons-list-item>
+          
+          <ons-list-item ng-click="load('DepartmentInformation.html')" tappable>
+            系所介紹
+          </ons-list-item>
+          
+          <ons-list-item ng-click="load('RegistrationSystem.html')" tappable>
+            報名系統
+          </ons-list-item>
+          
+          <ons-list-item ng-click="load('PeripheralInformation.html')" tappable>
+            周邊資訊
+          </ons-list-item>
+          
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content var="mySplitterContent" page="home.html"></ons-splitter-content>
+  </ons-splitter>
+  
+  
+<!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 -->
+
+ <ons-template id="home.html">
+    <ons-page modifier="full_bg">
+        <ons-toolbar>
+            <div class="left">
+                <ons-toolbar-button ng-click="open()">
+                    <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center"; >
+               美和科技大學
+        </div>
+        </ons-toolbar>
+        <div class="center" style="background-image:url('images/MeihoUniversityBackground.png');-moz-background-size:cover;background-size:cover;">
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+        <p align=right  padding-top: 50px;>
+       <ons ng-click="load('DepartmentInformation.html')"><img src="images/系所介紹.png" width="60%"></ons> 
+       </p> 
+       <p>&nbsp;</p><p>&nbsp;</p>
+       <p align=right  padding-top: 50px;>
+       <ons ng-click="load('RegistrationSystem.html')"><img src="images/報名系統.png" width="70%"></ons> 
+       </p> 
+       <p>&nbsp;</p><p>&nbsp;</p>
+       <p align=right  padding-top: 50px;>
+       <ons ng-click="load('PeripheralInformation.html')"><img src="images/周邊資訊.png" width="80%"></ons> 
+       </p> 
+       <p>&nbsp;</p>
+         <p>&nbsp;</p>
+         <p>&nbsp;</p>
+        </div>
+    </ons-page>
+  </ons-template>
+
+
+<!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 --><!-- 第一頁 -->
+
+
+
+<!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 -->
+  <ons-template id="DepartmentInformation.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          系所介紹
+        </div>
+      </ons-toolbar>
+     <div class="p1Content" style="background-image:url('images/MeihoUniversityBackground_resized.jpg'); background-size:contain; background-repeat:no-repeat;-moz-background-size:cover;background-size:cover;">
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      
+<!-- 其它頁面回系所介紹首頁標籤 --><!-- 其它頁面回系所介紹首頁標籤 --><!-- 其它頁面回系所介紹首頁標籤 -->
+<a name="home">  </a>
+<!-- 其它頁面回系所介紹首頁標籤 --><!-- 其它頁面回系所介紹首頁標籤 --><!-- 其它頁面回系所介紹首頁標籤 -->
+
+<!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 -->
+       <p align=center  padding-top: 50px;>
+       <ons ng-click="load('EducationalPhilosophy.html')"><img src="images/EducationalPhilosophyButton.png"></ons>
+       </p>
+       <p>&nbsp;</p>
+       <p align=center  padding-top: 50px;>
+       <ons ng-click="load('CurriculumPlanning.html')"><img src="images/課程規劃與特色.png"></ons> 
+       </p> 
+       <p>&nbsp;</p>
+       <p align=center  padding-top: 50px;>
+       <ons ng-click="load('FutureDevelopment.html')"><img src="images/未來發展.png"></ons>
+       </p>
+       <p>&nbsp;</p>
+      <p align=center  padding-top: 50px;>
+       <ons ng-click="load('ObtainEmployment.html')"><img src="images/畢業後續發展.png"></ons>
+      </p>  
+      <p>&nbsp;</p>
+         <p>&nbsp;</p>
+ 
+<!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 --><!-- 用按鈕方式連結 -->         
+      </p>
+      
+       <!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab   position="bottom right"ng-click="load('home.html')"><!-- 點選浮動按鈕回系所介紹 -->
+      <font style="font-size:10px;">back 
+      </font><!-- 按鈕內文字格式 -->
+    </ons-fab>
+    </div>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    </ons-page>
+  </ons-template>
+<!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 --><!-- 系所介紹 -->
+
+
+
+
+<!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 -->
+<ons-template id="EducationalPhilosophy.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          <a name="EducationalPhilosophy">教育理念</a>
+        </div>
+      </ons-toolbar>
+     <p  align=center> </p>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px; ">
+   <p  align=center>  <a name="EducationalPhilosophy">一、教育理念</a> </p>
+            <p  align=center> 資訊科技發展日新月異 </p>
+            <p  align=center> 已使人類生活型態產生極大改變  </p>
+            <p  align=center> 資訊科技更全面影響每一個 </p>
+            <p  align=center> 學術領域的發展 </p>
+            <p  align=center> 大量專業資訊科技人才的需求  </p>
+            <p  align=center> 是國家經濟發展的趨勢</p>
+            <p  align=center> &nbsp; </p>
+            <p  align=center> 本校有鑑於此 </p>
+            <p  align=center> 於九十四學年奉教育部核定 </p>
+            <p  align=center> 成立資訊科技系</p>
+            <p  align=center> 以培養學生具備資訊科技之 </p>
+            <p  align=center> 基本理論及實務能力</p>
+            <p  align=center> 為國家培育中基層專業資訊科技人才 </p>
+            <p  align=center> 隨著少子化的社會趨勢 </p>
+            <p  align=center> 及樂活族人口的增加</p>
+            <p  align=center> 世界各國都積極推動以居家式 </p>
+            <p  align=center> 、社區式、機構式為主的照護服務模式</p>
+            <p  align=center> 利用人員定位、遠距監控等方式 </p>
+            <p  align=center> 來建構e化、新型態的科技照護服務 </p>
+            <p  align=center> &nbsp; </p>
+            <p  align=center> 美和從事醫護教育已四十餘年 </p>
+            <p  align=center> 對於健康照護、生技產業及 </p>
+            <p  align=center> 營養食品之推展不遺餘力</p>
+            <p  align=center> 健康產業需要尖端創新的內涵  </p>
+            <p  align=center> 為了配合本校的特色發展  </p> 
+            <p  align=center> 確立本系在健康產業的 </p>
+            <p  align=center> 發展方向與專業性</p>
+            <p  align=center> 於99學年度將「資訊科技系」 </p> 
+            <p  align=center> 納入健康暨護理學院</p>
+            <p  align=center> 以培養健康產業所需之資訊科技  </p> 
+            <p  align=center> 人才為教育目標</p>
+ </p>
+ <!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+<ons-fab   position="bottom right"ng-click="load('DepartmentInformation.html')"  ><!-- 點選浮動按鈕回系所介紹 -->
+  <font style="font-size:10px;">back 
+  </font><!-- 按鈕內文字格式 -->
+</ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+      
+    </ons-page>
+  </ons-template>
+
+<!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 --><!-- 教育理念 -->
+
+
+
+
+<!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 -->
+<ons-template id="CurriculumPlanning.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          <a name="CurriculumPlanning">課程規劃與特色</a>
+        </div>
+      </ons-toolbar>
+ <p style="text-align: center; opacity: 0.6; padding-top: 20px; ">
+ <p  align=center>  <a name="CurriculumPlanning">二、課程規劃與特色  </a></p> 
+            <p  align=left>  為了配合職場人力需求  </p>
+            <p  align=left>  掌握資訊科技發展趨勢  </p>
+            <p  align=left>  依據資訊科技的特性與應用 </p>
+            <p  align=left>  本系課程規劃重視基礎的學理與實作  </p>
+            <p  align=left>  將課程與證照結合 </p>
+            <p  align=left>  使學生修習課程後 </p>
+            <p  align=left>  即具備考照能力 </p>
+            <p  align=left>  期望學生在四技專業教育之後 </p>
+            <p  align=left>  有紮實的學理以適應多變的環境 </p>
+            <p  align=left>  更擁有實用的技術能力 </p>
+            <p  align=left>  本系定期邀請產業界與學界之專家學者 </p> 
+            <p  align=left>  召開課程規劃委員會 </p> 
+            <p  align=left>  依據專業需求及職場能力訂定相關專業課程 </p> 
+            <p  align=left>  本系以單晶片 </p>
+            <p  align=left>  網路及多媒體等三類課程為發展健康產業 </p>
+            <p  align=left>  資訊應用之基礎 </p>
+            <p  align=left>  為了強化學生專業能力之發展 </p>
+            <p  align=left>  加入健康產業相關課程 </p>
+            <p  align=left>   在資訊課程架構下</p>
+            <p  align=left>   以健康產業實務應用為發展主軸</p>
+            <p  align=left>   達到學以致用之目標</p>
+            <p  align=left>   系發展特色為：</p>
+            <p  align=left>   (一) 符合專業能力需求之課程設計</p>
+            <p  align=left>   (二) 以實務為導向之教學實驗室 </p>
+            <p  align=left>   (三) 符合就業需求之專業能力發展</p>
+            <p  align=left>   (四) 多元化之系知識發展</p>
+            <p  align=left>   (五) 重視區域健康照護發展</p>
+            <p  align=left><a href="http://mit3.meiho.edu.tw/%2Fself_store%2F9%2Fself_attach%2F%E5%B0%88%E6%A5%AD%E8%AA%B2%E7%A8%8B%E5%9C%B0%E5%9C%96.pdf">專業課程地圖</a> </p>
+            <p  align=left><a href="http://mit3.meiho.edu.tw/%2Fself_store%2F9%2Fself_attach%2F%E8%AD%89%E7%85%A7%E8%88%87%E8%AA%B2%E7%A8%8B.pdf">證照與課程聯結圖</a></p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+<ons-fab   position="bottom right"ng-click="load('DepartmentInformation.html')"  ><!-- 點選浮動按鈕回系所介紹 -->
+  <font style="font-size:10px;">back 
+  </font><!-- 按鈕內文字格式 -->
+</ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+      
+    </ons-page>
+  </ons-template>
+<!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 --><!-- 課程規劃與特色 -->
+
+
+<!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 -->
+<ons-template id="FutureDevelopment.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          <a name="FutureDevelopment">未來發展</a>
+        </div>
+      </ons-toolbar>
+ <p style="text-align: center; opacity: 0.6; padding-top: 20px; ">  
+ <p  align=center> <a name="FutureDevelopment">三、未來發展</a></p>
+            <p  align=left> 本系配合國家發展  </p>
+            <p  align=left> 結合健康產業結構需求 </p>
+            <p  align=left>  規劃理論與實務兼顧之連貫課程 </p>
+            <p  align=left>  經由完整的教育訓練 </p>
+            <p  align=left>  提高學生的自我價值與專業能力 </p>
+            <p  align=left>  依據課程設計 </p>
+            <p  align=left>  本系畢業學生可擔任之工作如下表所示 </p>
+            <p  align=left>  有志進修的同學 </p>
+            <p  align=left>  畢業後可報考國內外資訊科技或健康照護等 </p>
+            <p  align=left>  相關研究所 </p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+<ons-fab   position="bottom right"ng-click="load('DepartmentInformation.html')"  ><!-- 點選浮動按鈕回系所介紹 -->
+  <font style="font-size:10px;">back</font><!-- 按鈕內文字格式 -->
+</ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+      
+    </ons-page>
+  </ons-template>
+<!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 --><!-- 未來發展 -->
+
+
+
+
+<!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 -->
+<ons-template id="ObtainEmployment.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          <a name="ObtainEmployment">畢業後續發展</a>
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px; ">
+      <p  align=center> <a name="ObtainEmployment">四、畢業後續發展</a></p>
+           <p  > 
+               <table border=1 align=center>
+                <td>課程分類</td>  <td>工作名稱</td>  <td>代表性工作職稱</td>
+                <tr>
+                <td>嵌入式系統課程</td><td>1.軟體設計工程師2.系統程式設計工程師</td><td>電腦程式設計人員</td>
+                <tr>
+                <td>多媒體課程</td><td>1.網頁設計工程師2.影像處理工程師3.資料庫開發工程師</td>
+                <td>多媒體設計人員</td>
+                </table>                                   </p><!-- 表格 -->
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+  <ons-fab   position="bottom right"ng-click="load('DepartmentInformation.html')"  ><!-- 點選浮動按鈕回系所介紹 -->
+     <font style="font-size:10px;">back</font><!-- 按鈕內文字格式 -->
+  </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    </ons-page>
+  </ons-template>
+<!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 --><!-- 畢業後續發展 -->
+
+
+
+
+<!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 -->
+  <ons-template id="RegistrationSystem.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          報名系統 
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+        <iframe frameborder="0" width="100%" 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeNsOJpdH_mr0A6ajPTPzRxVGrO193KwSpO6FMWNBJ2tjwW3Q/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+      </p>
+       <!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab position="bottom right"ng-click="load('home.html')"><!-- 點選浮動按鈕回系所介紹 -->
+      <font style="font-size:10px;">back</font><!-- 按鈕內文字格式 -->
+    </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    </ons-page>
+  </ons-template>    
+  <!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 --><!-- 報名系統 -->
+  
+  
+  
+  
+  
+  
+  
+<!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 --> <!-- 周邊資訊 -->
+<!-- 用Executing SQL (SQLite)做資料庫 -->
+  <ons-template id="PeripheralInformation.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+
+        <div class="center">
+         周邊資訊
+        </div>
+      </ons-toolbar>
+    <p style="text-align:center; opacity: 0.6; padding-top: 50px;">
+      <p align=center  padding-top:50px;>
+      <ons-button ng-click="load('Life.html')"style="width:150px;height:150px; line-height:150px; background-color:green; font-size:32px;"><ons-ripple></ons-ripple>生活</ons-button>
+      <ons-button ng-click="load('Food.html')"style="width:150px;height:150px;line-height:150px; background-color:blue; font-size:32px;"><ons-ripple></ons-ripple>美食</ons-button>
+      </p>        
+      <p align=center  padding-top:50px;>
+      <ons-button ng-click="load('Tool.html')"style="width:150px;height:150px;line-height:150px; background-color:red; font-size:32px;"><ons-ripple></ons-ripple>工具</ons-button>
+      <ons-button ng-click="load('Drink.html')"style="width:150px;height:150px;line-height:150px; background-color:yellow; font-size:32px;"><ons-ripple></ons-ripple>飲品</ons-button>
+      </p> 
+    </p>
+     <!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+<ons-fab   position="bottom right"ng-click="load('home.html')"><!-- 點選浮動按鈕回系所介紹 -->
+  <font style="font-size:10px;">back 
+  </font><!-- 按鈕內文字格式 -->
+</ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    </ons-page>
+  </ons-template>
+ 
+<!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 -->
+<!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 -->
+<ons-template id="Food.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+         美食
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+       <p  align=center><a name="Food">美食</a> </p>
+      <p  align=left>丟丟銅</p>
+      <p  align=left>屏東縣內埔鄉學人路531-4號</p>
+      <p  align=left><img src="images/丟丟銅.jpg"/ style="width:50%;heigh:50%">
+      <a href="https://www.google.com.tw/maps/place/%E4%B8%9F%E4%B8%9F%E9%8A%85/@22.6045507,120.5623498,15z/data=!4m5!3m4!1s0x0:0x7949ebd5ed6699e8!8m2!3d22.6045507!4d120.5623498">地圖</a></p>      
+      <p  align=left>阿鳴嫂傳統客家菜</p>
+      <p  align=left>屏東縣內埔鄉和興村學人路620號</p>
+      <p  align=left><img src="images/阿鳴嫂.jpg"/ style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/NY5n1SyyG522">地圖</a></p>
+      <p  align=left>&nbsp;</p>
+      <p  align=left>21金小火鍋/臭臭鍋</p>
+      <p  align=left>屏東縣內埔鄉學人路640號</p>
+      <p  align=left><img src="images/21金小火鍋臭臭鍋內埔店.jpg"/ style="width:50%;heigh:50%"><img src="images/21金小火鍋臭臭鍋內埔店菜單.jpg"/ style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/B57PmQW25r32">地圖</a></p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab   position="bottom right"ng-click="load('PeripheralInformation.html')"  >
+    周邊資訊   
+    </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --> 
+    </ons-page>
+</ons-template>
+<!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 --><!-- 美食 -->
+
+
+
+<!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 -->
+<ons-template id="Drink.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+         飲品
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      <p  align=center><a name="Drink">飲品</a></p>
+      <p  align=left>白面東極品楊桃汁-屏東內埔店</p>
+      <p  align=left>屏東縣學人路509號</p>
+      <p  align=left><img src="images/白面東極品楊桃汁-屏東內埔店.jpg"/ style="width:50%;heigh:50%"><p  align=left><img src="images/白面東極品楊桃汁-屏東內埔店菜單.jpg"/ style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/WxMRTNcsqS62">地圖</a></p>
+      <p  align=left>&nbsp;</p>
+      <p  align=left>菓語食點-果汁輕食專賣店</p>
+      <p  align=left><img src="images/菓語食點果汁輕食專賣店.jpg"/style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/oj88xJ6Fxsq">地圖</a></p>
+      <p  align=left>&nbsp;</p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab   position="bottom right"ng-click="load('PeripheralInformation.html')"  >
+    周邊資訊
+    </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->      
+    </ons-page>
+</ons-template>
+<!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 --><!-- 飲品 -->
+
+
+
+<!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 -->
+<ons-template id="Life.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+         生活
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      <p  align=center><a name="Life">生活</a></p>
+      <p  align=left>美華泰MIRADA &nbsp; 內埔店</p>
+      <p  align=left><img src="images/美華泰MIRADA.jpg"/style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/3s857C1chTS2">地圖</a></p>
+      <p  align=left>&nbsp;</p>
+      <p  align=left>全聯福利中心</p>
+      <p  align=left><img src="images/全聯福利中心.jpg"/style="width:50%;heigh:70%">
+      <a href="https://goo.gl/maps/XF25c4VG2782">地圖</a></p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab   position="bottom right"ng-click="load('PeripheralInformation.html')"  >
+    周邊資訊
+    </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->      
+    </ons-page>
+</ons-template>
+<!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 --><!-- 生活 -->
+
+
+
+<!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 -->
+<ons-template id="Tool.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button ng-click="open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+         工具
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+      <p  align=center><a name="Tool">工具</a></p>
+      <!-- 工具 -->
+      <p  align=left>順發3C量販</p>
+      <p  align=left><img src="images/順發3C量販.jpg"/style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/drG9nxT6Qjy">地圖</a></p>      
+      <p  align=left>&nbsp;</p>
+      <p  align=left>燦坤3C</p>
+      <p  align=left><img src="images/燦坤3C.jpg"/style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/1pQnab9fLgv">地圖</a></p>
+      <p  align=left>&nbsp;</p>
+      <p  align=left>101文具天堂</p>
+      <p  align=left><img src="images/101文具天堂.jpg"/style="width:50%;heigh:50%">
+      <a href="https://goo.gl/maps/fU8N6RuJEVK2">地圖</a></p>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->
+    <ons-fab   position="bottom right"ng-click="load('PeripheralInformation.html')"  >
+    周邊資訊
+    </ons-fab>
+<!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 --><!-- 浮動按鈕 -->      
+    </ons-page>
+</ons-template>
+<!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 --><!-- 工具 -->
+</body>
+
+</html>
+
+
